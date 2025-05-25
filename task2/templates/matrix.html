@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply Matrices</title>
+</head>
+<body>
+    <h1>Multiply Matrices</h1>
+    <form method="POST">
+        <label for="matrix1">Enter Matrix 1 (comma-separated):</label>
+        <input type="text" id="matrix1" name="matrix1" required>
+        <br>
+        <label for="matrix2">Enter Matrix 2 (comma-separated):</label>
+        <input type="text" id="matrix2" name="matrix2" required>
+        <button type="submit">Multiply</button>
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <ul>
+            {% for row in result %}
+                <li>{{ row }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
